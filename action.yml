@@ -1,0 +1,41 @@
+name: 'Kemocade VRChat Group Tracker Action'
+description: 'GitHub Action for automatically tracking information from the VRChat API'
+branding:
+  icon: globe
+  color: blue
+inputs:
+  workspace:
+    description: 'The workspace directory.'
+    default: '/github/workspace'
+  output:
+    description: 'The directory to write output inside of (relative to workspace). Example, "path/to/output".'
+    required: true
+  username:
+    description: 'VRChat Username'
+    required: true
+  password:
+    description: 'VRChat Password'
+    required: true
+  key:
+    description: 'VRChat 2FA secret key'
+    required: true
+  groups:
+    description: 'VRChat Group ID or IDs to track (if more than one, use a comma-delimited string)'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - '-w'
+  - ${{ inputs.workspace }}
+  - '-o'
+  - ${{ inputs.output }}
+  - '-u'
+  - ${{ inputs.username }}
+  - '-p'
+  - ${{ inputs.password }}
+  - '-k'
+  - ${{ inputs.key }}
+  - '-g'
+  - ${{ inputs.groups }}
