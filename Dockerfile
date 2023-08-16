@@ -12,9 +12,9 @@ LABEL repository="https://github.com/kemocade/Kemocade.Vrc.Group.Tracker.Action"
 LABEL homepage="https://github.com/kemocade/Kemocade.Vrc.Group.Tracker.Action"
 
 # Label as GitHub action
-LABEL com.github.actions.name="Kemocade VRChat Group Tracker Action"
+LABEL com.github.actions.name="Kemocade VRC Group Tracker Action"
 # Limit to 160 characters
-LABEL com.github.actions.description="Kemocade VRChat Group Tracker Action"
+LABEL com.github.actions.description="Kemocade VRC Group Tracker Action"
 # See branding:
 # https://docs.github.com/actions/creating-actions/metadata-syntax-for-github-actions#branding
 LABEL com.github.actions.icon="upload-cloud"
